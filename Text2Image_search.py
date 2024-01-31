@@ -9,7 +9,7 @@ class MultimodalSearch:
         # Initialize the DocumentStore to store 512 dim image embeddings
         self.document_store = InMemoryDocumentStore(embedding_dim=512)
 
-        doc_dir = "new_data"
+        doc_dir = "Data"
 
         images = [
             Document(content=f"./{doc_dir}/{filename}", content_type="image")
