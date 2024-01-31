@@ -1,12 +1,11 @@
-from haystack.document_stores import InMemoryDocumentStore
-from haystack.nodes.retriever.multimodal import MultiModalRetriever
 import os
 from haystack import Document
 from haystack import Pipeline
+from haystack.document_stores import InMemoryDocumentStore
+from haystack.nodes.retriever.multimodal import MultiModalRetriever
 
 class MultimodalSearch:
     def __init__(self):
-        # Initialize the DocumentStore to store 512 dim image embeddings
         self.document_store = InMemoryDocumentStore(embedding_dim=512)
 
         doc_dir = "Data"
